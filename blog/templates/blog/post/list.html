@@ -1,0 +1,38 @@
+{% extends "blog/base.html" %}
+{% block title %}My Blog{% endblock %}
+{% block content %}
+<div class = 'w3-container'>
+<h1>New Articles</h1>
+    </div>
+<div class="w3-sidebar w3-bar-block" style="width:25%;right:0">
+    <h1>Quick Links</h1>
+  <a href="#" class="w3-bar-item w3-button"> Link 1</a>
+  <a href="#" class="w3-bar-item w3-button"> Link 2</a>
+  <a href="#" class="w3-bar-item w3-button"> Link 3</a>
+</div>
+
+<div style="margin-left:5%">
+{% for post in posts %}
+<div class="w3-card-4 w3-margin w3-white w3-col l8 s12">
+    <div class="w3-container">
+<h2>
+<a href="{{ post.get_absolute_url }}">
+{{ post.title }}
+</a>
+</h2>
+    </div>
+    <div class="w3-container">
+<p class="date">
+Published {{ post.publish }} by {{ post.author }}
+</p>
+{{ post.body|truncatewords:30|linebreaks }}
+    </div>
+        </div>
+
+</di>
+{% endfor %}
+<div class = "w3-container">
+{% include "pagination.html" with page=page_obj %}
+</div>
+    </div>
+{% endblock %}
