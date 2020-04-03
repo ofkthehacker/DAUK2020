@@ -1,5 +1,7 @@
 pandas
 matplotlib
 django
+gunicorn
+django-heroku
 seaborn
 numpy
