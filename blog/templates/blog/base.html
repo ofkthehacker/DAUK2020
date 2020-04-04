@@ -8,17 +8,6 @@
     <style>
     body {margin:0;}
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
 li {
   float: left;
 }
@@ -41,12 +30,15 @@ li a:hover:not(.active) {
 </style>
 </head>
 <body>
-<ul>
-  <li><a href="/">Home</a></li>
-  <li><a href="/blog">Articles</a></li>
-  <li><a href="/argali">Argali</a></li>
-  <li><a href="/about">About</a></li>
-</ul>
+<header class="w3-panel w3-center w3-opacity" style="padding:16px 16px">
+      <div class="w3-padding-32">
+    <div class="w3-bar w3-border">
+      <a href="/" class="w3-bar-item w3-button">Home</a>
+      <a href="/blog" class="w3-bar-item w3-button">Articles</a>
+      <a href="/argali" class="w3-bar-item w3-button">Argali</a>
+      <a href="/about" class="w3-bar-item w3-button">About</a>
+    </div>
+
 <div id="content">
     <div>
         <br>
