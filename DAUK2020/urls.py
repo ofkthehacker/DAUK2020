@@ -22,6 +22,7 @@ from . import settings
 
 
 urlpatterns = [
+    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
     path('blog/', include('blog.urls', namespace='blog')),
